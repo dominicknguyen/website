@@ -1,17 +1,59 @@
 <html>
   <head>
     <title> Dominick Nguyen </title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <style>
+    .video-background {
+    background: #000;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+    }
+    .video-foreground,
+    .video-background iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    p, li {
+      font-size: 20px;
+    }
+
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      setTimeout(function(){
+      $(".video-background").fadeOut("slow", function () {
+      $(".video-background").remove();
+      });
+
+      }, 60000);
+      });
+  </script>
   </head>
   <body>
-  <p> hi i'm dominick. i'm studying statistics and computer science at UCSD. </p>
-  <p> cool facts: </p>
-  <ul>
-    <li> interning @ facebook. previously interned at Akamai and Financial Engines </li>
-    <li> <a href="http://www.soundcloud.com/tillamoo">music i like</a> </li>
-    <li> <a href="http://www.linkedin.com/dominick-nguyen">linkedin</a></li>
-    <li> lets be friends : dhn031@ucsd.edu </li>
-  </ul>
+      <div class="video-background">
+        <div class="video-foreground">
+        <iframe frameborder="0" height="100%" width="100%" 
+          src="https://youtube.com/embed/5GUc4FewMjk?autoplay=1&controls=0&showinfo=0&autohide=1">
+        </iframe>
+        </div>
+      </div>
+    <p> hi i'm dominick, applied math @ucsd: </p>
+    <ul>
+      <li> interning @ facebook. previously interned at Akamai and Financial Engines </li>
+      <li> <a href="http://www.soundcloud.com/tillamoo">music i like</a> </li>
+      <li> <a href="http://www.linkedin.com/dominick-nguyen">linkedin</a></li>
+      <li> lets be friends : dhn031@ucsd.edu </li>
+      <li> i don't know web so please don't take this seriously </li>
+      <li> vid from apple thx</li>
+    </ul>
   </body>
-
-
 </html>
+
